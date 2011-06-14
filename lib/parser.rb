@@ -36,7 +36,7 @@ class Parser
     @followed = template['Followed']
     # Add all suitable @template options to @constants
     @constants = template.delete_if { |key,val| ["Pages","Following","Posts","SubmissionsEnabled","Followed"].include? key }
-    @constants['RSS'] = '/thimblr/rss'
+    @constants['RSS'] = '/rss'
     @constants['Favicon'] = '/favicon.ico'
     @blocks = { # These are the defaults
       'Twitter'            => !@constants['TwitterUsername'].empty?,
